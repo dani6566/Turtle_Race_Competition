@@ -20,7 +20,7 @@ def prepare_turtle():
         all_turtles.append(emmy_turtle)
     return all_turtles
 
-
+all_turtles = prepare_turtle()
 if user_bet:
     is_race_on = True
 
@@ -31,15 +31,15 @@ while is_race_on:
             if winner_color == user_bet:
                 print(f"You've won! The {winner_color} turtle")
                 is_race_on = False
-                screen.clear()
+                # screen.clear()
             else:
-                print(f"You Lost. The winner is {winner_color} turtle")
+                print(f"You Lost. The {winner_color} turtle is the winner")
                 is_race_on = False
-                screen.clear()
+                # screen.clear()
         single_turtle.penup()
         rand_num = random.randint(0,10)
         single_turtle.forward(rand_num)
 
-    all_turtles = prepare_turtle()
     
+
 screen.exitonclick()
